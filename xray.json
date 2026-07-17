@@ -9,7 +9,7 @@
       "protocol": "trojan",
       "tag": "ws-trojan",
       "settings": {
-        "clients": [{"password": "Wenmaster18", "level": 0}]
+        "clients": [{"password": "Webmaster18", "level": 0}]
       },
       "streamSettings": {
         "network": "ws",
@@ -104,7 +104,7 @@
       "protocol": "trojan",
       "tag": "hu-trojan",
       "settings": {
-        "clients": [{"password": "Wenmaster18", "level": 0}]
+        "clients": [{"password": "Webmaster18", "level": 0}]
       },
       "streamSettings": {
         "network": "httpupgrade",
@@ -175,7 +175,7 @@
       "tag": "hu-ss",
       "settings": {
         "method": "chacha20-ietf-poly1305",
-        "password": "Wenmaster18",
+        "password": "Webmaster18",
         "network": "tcp,udp"
       },
       "streamSettings": {
