@@ -80,7 +80,7 @@
       "tag": "ws-ss",
       "settings": {
         "method": "chacha20-ietf-poly1305",
-        "password": "Wenmaster18",
+        "password": "Webmaster18",
         "network": "tcp,udp"
       },
       "streamSettings": {
