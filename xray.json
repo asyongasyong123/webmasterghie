@@ -17,24 +17,18 @@
       },
       "sniffing": {
         "enabled": true,
-        "destOverride": ["http", "tls", "quic"],
-        "routeOnly": true
+        "destOverride": ["http", "tls"]
       },
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/trojan-webmasterghie?ed=2560",
-          "acceptForwardedFor": ["127.0.0.1"]
+          "path": "/tr-webmasterghie18?ed=2560"
         },
         "sockopt": {
-          "tcpNoDelay": true,
           "tcpKeepAlive": true,
           "tcpKeepAliveIdle": 30,
           "tcpKeepAliveInterval": 15,
-          "tcpKeepAliveProbes": 5,
-          "mark": 255,
-          "tcpFastOpen": true,
-          "tcpFastOpenQueueLength": 1024
+          "tcpKeepAliveProbes": 5
         }
       }
     },
@@ -45,7 +39,7 @@
       "settings": {
         "clients": [
           {
-            "id": "2562559e-70b2-4811-a65c-8c8b9e1f2d3a",
+            "id": "d3f1a2b4-7e5c-4f8b-9c1d-2a3b4e5f6a7b",
             "level": 0
           }
         ],
@@ -53,28 +47,53 @@
       },
       "sniffing": {
         "enabled": true,
-        "destOverride": ["http", "tls", "quic"],
-        "routeOnly": true
+        "destOverride": ["http", "tls"]
       },
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/vless-webmasterghie?ed=2560",
-          "acceptForwardedFor": ["127.0.0.1"]
+          "path": "/vl-webmasterghie18?ed=2560"
         },
         "sockopt": {
-          "tcpNoDelay": true,
           "tcpKeepAlive": true,
           "tcpKeepAliveIdle": 30,
           "tcpKeepAliveInterval": 15,
-          "tcpKeepAliveProbes": 5,
-          "tcpFastOpen": true,
-          "tcpFastOpenQueueLength": 1024
+          "tcpKeepAliveProbes": 5
         }
       }
     },
     {
       "port": 10003,
+      "listen": "127.0.0.1",
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "a7c8d9e0-f1b2-43c4-85d6-123456789abc",
+            "alterId": 0,
+            "level": 0
+          }
+        ]
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls"]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/vm-webmasterghie18?ed=2560"
+        },
+        "sockopt": {
+          "tcpKeepAlive": true,
+          "tcpKeepAliveIdle": 30,
+          "tcpKeepAliveInterval": 15,
+          "tcpKeepAliveProbes": 5
+        }
+      }
+    },
+    {
+      "port": 10004,
       "listen": "127.0.0.1",
       "protocol": "shadowsocks",
       "settings": {
@@ -84,59 +103,18 @@
       },
       "sniffing": {
         "enabled": true,
-        "destOverride": ["http", "tls", "quic"],
-        "routeOnly": true
+        "destOverride": ["http", "tls"]
       },
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/ss-webmasterghie?ed=2560",
-          "acceptForwardedFor": ["127.0.0.1"]
+          "path": "/ss-webmasterghie18?ed=2560"
         },
         "sockopt": {
-          "tcpNoDelay": true,
           "tcpKeepAlive": true,
           "tcpKeepAliveIdle": 30,
           "tcpKeepAliveInterval": 15,
-          "tcpKeepAliveProbes": 5,
-          "tcpFastOpen": true,
-          "tcpFastOpenQueueLength": 1024
-        }
-      }
-    },
-    {
-      "port": 10004,
-      "listen": "127.0.0.1",
-      "protocol": "vmess",
-      "settings": {
-        "clients": [
-          {
-            "id": "2562559e-70b2-4811-a65c-8c8b9e1f2d3a",
-            "alterId": 0,
-            "level": 0
-          }
-        ],
-        "disableInsecure": true
-      },
-      "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls", "quic"],
-        "routeOnly": true
-      },
-      "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "path": "/vmess-webmasterghie?ed=2560",
-          "acceptForwardedFor": ["127.0.0.1"]
-        },
-        "sockopt": {
-          "tcpNoDelay": true,
-          "tcpKeepAlive": true,
-          "tcpKeepAliveIdle": 30,
-          "tcpKeepAliveInterval": 15,
-          "tcpKeepAliveProbes": 5,
-          "tcpFastOpen": true,
-          "tcpFastOpenQueueLength": 1024
+          "tcpKeepAliveProbes": 5
         }
       }
     }
@@ -144,23 +122,7 @@
   "outbounds": [
     {
       "protocol": "freedom",
-      "tag": "direct",
-      "settings": {
-        "domainStrategy": "UseIPv4",
-        "tcpKeepAliveInterval": 15,
-        "tcpKeepAliveIdle": 30
-      }
+      "tag": "direct"
     }
-  ],
-  "policy": {
-    "levels": {
-      "0": {
-        "handshake": 2,
-        "connIdle": 300,
-        "uplinkOnly": 0,
-        "downlinkOnly": 0,
-        "bufferSize": 1048576
-      }
-    }
-  }
+  ]
 }
