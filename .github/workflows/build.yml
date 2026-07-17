@@ -27,7 +27,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: webmasterghie/webmasterghie:latest
+          tags: docker.io/webmasterghie/webmasterghie:latest
           platforms: linux/amd64
           cache-from: ""
           cache-to: ""
