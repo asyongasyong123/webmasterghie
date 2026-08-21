@@ -16,7 +16,7 @@
         ]
       },
       "sniffing": {
-        "enabled": false,
+        "enabled": true,
         "destOverride": ["http", "tls"]
       },
       "streamSettings": {
@@ -46,7 +46,7 @@
         "decryption": "none"
       },
       "sniffing": {
-        "enabled": false,
+        "enabled": true,
         "destOverride": ["http", "tls"]
       },
       "streamSettings": {
@@ -76,7 +76,7 @@
         ]
       },
       "sniffing": {
-        "enabled": false,
+        "enabled": true,
         "destOverride": ["http", "tls"]
       },
       "streamSettings": {
@@ -102,7 +102,7 @@
         "network": "tcp,udp"
       },
       "sniffing": {
-        "enabled": false,
+        "enabled": true,
         "destOverride": ["http", "tls"]
       },
       "streamSettings": {
