@@ -29,7 +29,7 @@
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/tr-webmasterghie18?ed=2560"
+          "path": "/tr-webmasterghie18"
         },
         "sockopt": {
           "tcpNoDelay": true,
@@ -62,7 +62,7 @@
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/vl-webmasterghie18?ed=2560"
+          "path": "/vl-webmasterghie18"
         },
         "sockopt": {
           "tcpNoDelay": true,
@@ -95,7 +95,7 @@
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/vm-webmasterghie18?ed=2560"
+          "path": "/vm-webmasterghie18"
         },
         "sockopt": {
           "tcpNoDelay": true,
@@ -124,7 +124,7 @@
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/ss-webmasterghie18?ed=2560"
+          "path": "/ss-webmasterghie18"
         },
         "sockopt": {
           "tcpNoDelay": true,
@@ -144,25 +144,11 @@
       "settings": {
         "domainStrategy": "UseIPv4"
       }
-    },
-    {
-      "protocol": "blackhole",
-      "tag": "blocked",
-      "settings": {
-        "response": {
-          "type": "none"
-        }
-      }
     }
   ],
   "routing": {
     "domainStrategy": "IPIfNonMatch",
     "rules": [
-      {
-        "type": "field",
-        "domain": ["geosite:category-ads-all"],
-        "outboundTag": "blocked"
-      },
       {
         "type": "field",
         "inboundTag": ["trojan-ws", "vless-ws", "vmess-ws", "ss-ws"],
