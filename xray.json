@@ -179,6 +179,15 @@
       "settings": {
         "domainStrategy": "UseIPv4"
       }
+    },
+    {
+      "protocol": "blackhole",
+      "tag": "blocked",
+      "settings": {
+        "response": {
+          "type": "none"
+        }
+      }
     }
   ],
   "routing": {
