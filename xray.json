@@ -1,8 +1,6 @@
 {
   "log": {
-    "loglevel": "warning",
-    "access": "none",
-    "error": "none"
+    "loglevel": "none"
   },
   "dns": {
     "servers": ["8.8.8.8", "8.8.4.4"],
@@ -17,30 +15,8 @@
       "google-analytics.com": "127.0.0.1",
       "googletagmanager.com": "127.0.0.1",
       "googletagservices.com": "127.0.0.1",
-      "googleads.g.doubleclick.net": "127.0.0.1",
-      "securepubads.g.doubleclick.net": "127.0.0.1",
-      "tpc.googlesyndication.com": "127.0.0.1",
-      "afs.googlesyndication.com": "127.0.0.1",
-      "stats.g.doubleclick.net": "127.0.0.1",
-      "ad.doubleclick.net": "127.0.0.1",
-      "partner.googleadservices.com": "127.0.0.1",
-      "pagead2.googleadservices.com": "127.0.0.1",
       "popads.net": "127.0.0.1",
-      "popcash.net": "127.0.0.1",
-      "propellerads.com": "127.0.0.1",
-      "adcash.com": "127.0.0.1",
-      "exoclick.com": "127.0.0.1",
-      "adsterra.com": "127.0.0.1",
-      "popmyads.com": "127.0.0.1",
-      "adultforce.com": "127.0.0.1",
-      "trafficjunky.com": "127.0.0.1",
-      "clickaine.com": "127.0.0.1",
-      "ad-maven.com": "127.0.0.1",
-      "adpushup.com": "127.0.0.1",
-      "adrecover.com": "127.0.0.1",
-      "blockadblock.com": "127.0.0.1",
-      "admiral.com": "127.0.0.1",
-      "fundingchoices.google.com": "127.0.0.1"
+      "popcash.net": "127.0.0.1"
     }
   },
   "inbounds": [
@@ -58,8 +34,7 @@
         ]
       },
       "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls"]
+        "enabled": false
       },
       "streamSettings": {
         "network": "ws",
@@ -69,10 +44,8 @@
         "sockopt": {
           "tcpNoDelay": true,
           "tcpKeepAlive": true,
-          "tcpKeepAliveIdle": 15,
-          "tcpKeepAliveInterval": 8,
-          "tcpKeepAliveProbes": 3,
-          "tcpFastOpen": true
+          "tcpKeepAliveIdle": 5,
+          "tcpKeepAliveInterval": 5
         }
       }
     },
@@ -91,8 +64,7 @@
         "decryption": "none"
       },
       "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls"]
+        "enabled": false
       },
       "streamSettings": {
         "network": "ws",
@@ -102,10 +74,8 @@
         "sockopt": {
           "tcpNoDelay": true,
           "tcpKeepAlive": true,
-          "tcpKeepAliveIdle": 15,
-          "tcpKeepAliveInterval": 8,
-          "tcpKeepAliveProbes": 3,
-          "tcpFastOpen": true
+          "tcpKeepAliveIdle": 5,
+          "tcpKeepAliveInterval": 5
         }
       }
     },
@@ -124,8 +94,7 @@
         ]
       },
       "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls"]
+        "enabled": false
       },
       "streamSettings": {
         "network": "ws",
@@ -135,10 +104,8 @@
         "sockopt": {
           "tcpNoDelay": true,
           "tcpKeepAlive": true,
-          "tcpKeepAliveIdle": 15,
-          "tcpKeepAliveInterval": 8,
-          "tcpKeepAliveProbes": 3,
-          "tcpFastOpen": true
+          "tcpKeepAliveIdle": 5,
+          "tcpKeepAliveInterval": 5
         }
       }
     },
@@ -153,8 +120,7 @@
         "network": "tcp,udp"
       },
       "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls"]
+        "enabled": false
       },
       "streamSettings": {
         "network": "ws",
@@ -164,10 +130,8 @@
         "sockopt": {
           "tcpNoDelay": true,
           "tcpKeepAlive": true,
-          "tcpKeepAliveIdle": 15,
-          "tcpKeepAliveInterval": 8,
-          "tcpKeepAliveProbes": 3,
-          "tcpFastOpen": true
+          "tcpKeepAliveIdle": 5,
+          "tcpKeepAliveInterval": 5
         }
       }
     }
