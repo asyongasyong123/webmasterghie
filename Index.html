@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webmasterghie Panel</title>
+    <style>
+        body {
+            background-color: #0d1117;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: #c9d1d9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .panel {
+            background: #161b22;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+            width: 420px;
+            border: 1px solid #30363d;
+        }
+        h2 {
+            color: #f0f6fc;
+            margin-top: 0;
+            text-align: center;
+            font-size: 20px;
+        }
+        .status {
+            text-align: center;
+            background: rgba(46, 160, 67, 0.15);
+            color: #3fb950;
+            padding: 6px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border: 1px solid rgba(63, 185, 80, 0.4);
+        }
+        .service-card {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            padding: 10px 14px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .service-info span {
+            display: block;
+        }
+        .name {
+            font-weight: bold;
+            color: #f0f6fc;
+            font-size: 14px;
+        }
+        .type {
+            font-size: 11px;
+            color: #8b949e;
+        }
+        button {
+            background: #21262d;
+            color: #c9d1d9;
+            border: 1px solid #30363d;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 12px;
+            transition: 0.2s;
+        }
+        button:hover {
+            background: #30363d;
+            color: #ffffff;
+            border-color: #8b949e;
+        }
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            background: #238636;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 13px;
+            display: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="panel">
+        <h2>Webmasterghie Panel</h2>
+        <div class="status">&#9989; Cloud Run Tunnel Online</div>
+        
+        <div class="service-card">
+            <div class="service-info">
+                <span class="name">Trojan WS</span>
+                <span class="type">Path: /tr-webmasterghie18</span>
+            </div>
+            <button onclick="copyTrojan()">Copy</button>
+        </div>
+
+        <div class="service-card">
+            <div class="service-info">
+                <span class="name">VLESS WS</span>
+                <span class="type">Path: /vl-webmasterghie18</span>
+            </div>
+            <button onclick="copyVless()">Copy</button>
+        </div>
+
+        <div class="service-card">
+            <div class="service-info">
+                <span class="name">VMess WS</span>
+                <span class="type">Path: /vm-webmasterghie18</span>
+            </div>
+            <button onclick="copyVmess()">Copy</button>
+        </div>
+
+        <div class="service-card">
+            <div class="service-info">
+                <span class="name">Shadowsocks WS</span>
+                <span class="type">Path: /ss-webmasterghie18</span>
+            </div>
+            <button onclick="copySs()">Copy</button>
+        </div>
+    </div>
+
+    <div id="toast" class="toast">Copied to clipboard successfully!</div>
+
+    <script>
+        const currentHost = window.location.host;
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 2000);
+        }
+
+        function copyTrojan() {
+            const link = "trojan://webmasterghie18@apps.google.com:443?type=ws&host=" + currentHost + "&headerType=none&path=%2Ftr-webmasterghie18&security=tls&sni=assets.paymaya.com#%F0%9D%91%8A%F0%9D%91%92%F0%9D%91%8F%F0%9D%91%9A%F0%9D%91%8E%F0%9D%91%A0%F0%9D%91%A1%F0%9D%91%92%F0%9D%91%9F%20%F0%9D%90%BA%F0%9D%91%90%F0%9D%91%9D%20%F0%9D%91%86%F0%9D%91%A1%F0%9D%91%A0%20%F0%9D%91%81%F0%9D%91%9C%F0%9D%91%99%F0%9D%91%9C%F0%9D%91%8E%F0%9D%91%91%20%F0%9D%90%B6%F0%9D%91%9C%F0%9D%91%9B%F0%9D%91%93%F0%9D%91%96%F0%9D%91%94";
+            navigator.clipboard.writeText(link).then(showToast);
+        }
+
+        function copyVless() {
+            const link = "vless://d3f1a2b4-7e5c-4f8b-9c1d-2a3b4e5f6a7b@apps.google.com:443?encryption=none&type=ws&host=" + currentHost + "&headerType=none&path=%2Fvl-webmasterghie18&security=tls&sni=assets.paymaya.com#%F0%9D%91%8A%F0%9D%91%92%F0%9D%91%8F%F0%9D%91%9A%F0%9D%91%92%F0%9D%91%A0%F0%9D%91%A1%F0%9D%91%92%F0%9D%91%9F%20%F0%9D%90%BA%F0%9D%91%90%F0%9D%91%9D%20%F0%9D%91%86%F0%9D%91%A1%F0%9D%91%A0%20%F0%9D%91%81%F0%9D%91%9C%F0%9D%91%99%F0%9D%91%9C%F0%9D%91%8E%F0%9D%91%91%20%F0%9D%90%B6%F0%9D%91%9C%F0%9D%91%9B%F0%9D%91%93%F0%9D%91%96%F0%9D%91%94";
+            navigator.clipboard.writeText(link).then(showToast);
+        }
+
+        function copyVmess() {
+            const vmessObj = {
+                "v": "2",
+                "ps": "🎀 - VMess WS",
+                "add": "apps.google.com",
+                "port": 443,
+                "id": "a7c8d9e0-f1b2-43c4-85d6-123456789abc",
+                "aid": "0",
+                "net": "ws",
+                "type": "none",
+                "host": currentHost,
+                "path": "/vm-webmasterghie18",
+                "tls": "tls",
+                "sni": "assets.paymaya.com"
+            };
+            const link = "vmess://" + btoa(JSON.stringify(vmessObj));
+            navigator.clipboard.writeText(link).then(showToast);
+        }
+
+        function copySs() {
+            const link = "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp3ZWJtYXN0ZXJnaGllMTg=@apps.google.com:443/?plugin=v2ray-plugin%3Bmux%3D0%3Bpath%3D%2Fss-webmasterghie18%3Bhost%3D" + currentHost + "%3Btls#%F0%9D%91%8A%F0%9D%91%92%F0%9D%91%8F%F0%9D%91%9A%F0%9D%91%8E%F0%9D%91%A0%F0%9D%91%A1%F0%9D%91%92%F0%9D%91%9F%20%F0%9D%90%BA%F0%9D%91%90%F0%9D%91%9D%20%F0%9D%91%86%F0%9D%91%A1%F0%9D%91%A0%20%F0%9D%91%81%F0%9D%91%9C%F0%9D%91%99%F0%9D%91%9C%F0%9D%91%8E%F0%9D%91%91%20%F0%9D%90%B6%F0%9D%91%9C%F0%9D%91%9B%F0%9D%91%93%F0%9D%91%96%F0%9D%91%94";
+            navigator.clipboard.writeText(link).then(showToast);
+        }
+    </script>
+</body>
+</html>
