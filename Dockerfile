@@ -13,6 +13,7 @@ RUN rm -rf /etc/nginx/conf.d/* /etc/nginx/http.d/*
 
 COPY xray.json /etc/xray/config.json
 COPY nginx.conf /etc/nginx/nginx.conf
+COPY index.html /usr/share/nginx/html/index.html
 
 EXPOSE 8080
 
