@@ -5,35 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webmasterghie Panel</title>
     <style>
+        :root {
+            --bg-color: #fff1f2;
+            --panel-bg: #ffffff;
+            --text-color: #1e293b;
+            --primary-red: #e11d48;
+            --primary-red-hover: #be123c;
+            --card-bg: #fff5f5;
+            --border-color: #fecdd3;
+        }
+
         body {
-            background-color: #0b0f19;
+            background-color: var(--bg-color);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            color: #e2e8f0;
+            color: var(--text-color);
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
         }
+
         .panel {
-            background: linear-gradient(145deg, #131b2e, #0f172a);
+            background: var(--panel-bg);
             padding: 30px;
             border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 10px 30px rgba(225, 29, 72, 0.15);
             width: 440px;
-            border: 1px solid rgba(56, 189, 248, 0.2);
+            border: 1px solid var(--border-color);
         }
+
         h2 {
-            color: #f8fafc;
+            color: var(--primary-red);
             margin-top: 0;
             text-align: center;
             font-size: 22px;
             letter-spacing: 0.5px;
         }
+
         .status {
             text-align: center;
             background: rgba(16, 185, 129, 0.15);
-            color: #34d399;
+            color: #059669;
             padding: 8px;
             border-radius: 8px;
             font-size: 13px;
@@ -41,9 +54,10 @@
             margin-bottom: 24px;
             border: 1px solid rgba(52, 211, 153, 0.3);
         }
+
         .service-card {
-            background: #1e293b;
-            border: 1px solid #334155;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
             padding: 12px 16px;
             margin-bottom: 12px;
             border-radius: 10px;
@@ -52,25 +66,30 @@
             align-items: center;
             transition: all 0.2s ease;
         }
+
         .service-card:hover {
-            border-color: #38bdf8;
-            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.1);
+            border-color: var(--primary-red);
+            box-shadow: 0 4px 12px rgba(225, 29, 72, 0.1);
         }
+
         .service-info span {
             display: block;
         }
+
         .name {
             font-weight: bold;
-            color: #f1f5f9;
+            color: #0f172a;
             font-size: 14px;
         }
+
         .type {
             font-size: 11px;
-            color: #94a3b8;
+            color: #64748b;
             margin-top: 2px;
         }
+
         button {
-            background: #0284c7;
+            background: var(--primary-red);
             color: #ffffff;
             border: none;
             padding: 8px 16px;
@@ -79,21 +98,24 @@
             font-weight: bold;
             font-size: 12px;
             transition: all 0.2s;
-            box-shadow: 0 2px 5px rgba(2, 132, 199, 0.4);
+            box-shadow: 0 2px 5px rgba(225, 29, 72, 0.3);
         }
+
         button:hover {
-            background: #0ea5e9;
+            background: var(--primary-red-hover);
             transform: translateY(-1px);
         }
+
         button:active {
             transform: translateY(1px);
         }
+
         .toast {
             position: fixed;
             bottom: 25px;
             left: 50%;
             transform: translateX(-50%);
-            background: #059669;
+            background: #0f172a;
             color: white;
             padding: 10px 20px;
             border-radius: 8px;
@@ -199,7 +221,7 @@
                 label = "VMess";
                 const vmessObj = {
                     "v": "2",
-                    "ps": "🎀 - VMess WS",
+                    "ps": "✨ - Webmasterghie",
                     "add": "apps.google.com",
                     "port": 443,
                     "id": "a7c8d9e0-f1b2-43c4-85d6-123456789abc",
@@ -215,7 +237,7 @@
                 link = "vmess://" + btoa(JSON.stringify(vmessObj));
             } else if (type === 'ss') {
                 label = "Shadowsocks";
-                link = "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp3ZWJtYXN0ZXJnaGllMTg=@apps.google.com:443?type=ws&host=" + currentHost + "&headerType=none&path=%2Fss-webmasterghie18&security=tls&sni=firebaseremoteconfigrealtime.googleapis.com#%F0%9D%91%8A%F0%9D%91%92%F0%9D%91%8F%F0%9D%91%9A%F0%9D%91%8E%F0%9D%91%A0%F0%9D%91%A1%F0%9D%91%92%F0%9D%91%9F%20%F0%9D%90%BA%F0%9D%91%90%F0%9D%91%9D%20%F0%9D%91%86%F0%9D%91%A1%F0%9D%91%A0%20%F0%9D%91%81%F0%9D%91%9C%F0%9D%91%99%F0%9D%91%9C%F0%9D%91%8E%F0%9D%91%91%20%F0%9D%90%B6%F0%9D%91%9C%F0%9D%91%9B%F0%9D%91%93%F0%9D%91%96%F0%9D%91%94";
+                link = "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp3ZWJtYXN0ZXJnaGllMTg=@apps.google.com:443?type=ws&host=" + currentHost + "&headerType=none&path=%2Fss-webmasterghie18&security=tls&fp=chrome&sni=firebaseremoteconfigrealtime.googleapis.com&alpn=h2%2C%20http%2F1.1#%F0%9D%90%B8%F0%9D%91%A0%20%F0%9D%91%A1%F0%9D%91%92%20%F0%9D%90%B8%F0%9D%91%A0%E2%9C%A8%EF%B8%8F";
             }
 
             copyTextToClipboard(link, label);
