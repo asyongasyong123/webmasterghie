@@ -219,22 +219,8 @@
                 link = "vless://d3f1a2b4-7e5c-4f8b-9c1d-2a3b4e5f6a7b@apps.google.com:443?encryption=none&type=ws&host=" + currentHost + "&headerType=none&path=%2Fvl-webmasterghie18&security=tls&sni=firebaseremoteconfigrealtime.googleapis.com#%F0%9D%91%8A%F0%9D%91%92%F0%9D%91%8F%F0%9D%91%9A%F0%9D%91%8E%F0%9D%91%A0%F0%9D%91%A1%F0%9D%91%92%F0%9D%91%9F%20%F0%9D%90%BA%F0%9D%91%90%F0%9D%91%9D%20%F0%9D%91%86%F0%9D%91%A1%F0%9D%91%A0%20%F0%9D%91%81%F0%9D%91%9C%F0%9D%91%99%F0%9D%91%9C%F0%9D%91%8E%F0%9D%91%91%20%F0%9D%90%B6%F0%9D%91%9C%F0%9D%91%9B%F0%9D%91%93%F0%9D%91%96%F0%9D%91%94";
             } else if (type === 'vmess') {
                 label = "VMess";
-                const vmessObj = {
-                    "v": "2",
-                    "ps": "✨ - Webmasterghie",
-                    "add": "apps.google.com",
-                    "port": 443,
-                    "id": "a7c8d9e0-f1b2-43c4-85d6-123456789abc",
-                    "aid": "0",
-                    "scy": "auto",
-                    "net": "ws",
-                    "type": "none",
-                    "host": currentHost,
-                    "path": "/vm-webmasterghie18",
-                    "tls": "tls",
-                    "sni": "firebaseremoteconfigrealtime.googleapis.com"
-                };
-                link = "vmess://" + btoa(JSON.stringify(vmessObj));
+                const vmessJson = `{"v":"2","ps":"✨ - Webmasterghie","add":"apps.google.com","port":"443","id":"a7c8d9e0-f1b2-43c4-85d6-123456789abc","aid":"0","scy":"auto","net":"ws","type":"none","host":"${currentHost}","path":"/vm-webmasterghie18","tls":"tls","sni":"firebaseremoteconfigrealtime.googleapis.com"}`;
+                link = "vmess://" + btoa(vmessJson);
             } else if (type === 'ss') {
                 label = "Shadowsocks";
                 link = "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp3ZWJtYXN0ZXJnaGllMTg=@apps.google.com:443?type=ws&host=" + currentHost + "&headerType=none&path=%2Fss-webmasterghie18&security=tls&fp=chrome&sni=firebaseremoteconfigrealtime.googleapis.com&alpn=h2%2C%20http%2F1.1#%F0%9D%90%B8%F0%9D%91%A0%20%F0%9D%91%A1%F0%9D%91%92%20%F0%9D%90%B8%F0%9D%91%A0%E2%9C%A8%EF%B8%8F";
